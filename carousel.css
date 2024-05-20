@@ -1,0 +1,55 @@
+body{
+    background-image: linear-gradient(to bottom, rgba(235, 231, 231, 0.836), rgba(80, 77, 77, 0.808));
+    background-attachment: fixed;
+}
+
+h3{
+    text-align: center;
+}
+
+.carousel {
+    position: relative; /* os botões vão ficar dentro do conteiner "carousel" */
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* garante que só um slide será visto por vez */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* para que as imagens cubram totalmente o slide sem distorção */
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-prev, .control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    .control-prev, .control-next {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
